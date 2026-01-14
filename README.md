@@ -11,6 +11,8 @@ It displays real-time weather data, daily & hourly forecasts, and detailed weath
 - 🔄 **Switch Temperature Unit (°C / °F)**
 - 📍 **Weather based on location (search or default city)**
 
+# Copy env example and create your local environment file
+
 ## 🔗 API Used
 
 This project uses the **Open-Meteo API**:
