@@ -38,9 +38,9 @@ https://api.open-meteo.com/v1/forecast?latitude=-6.2&longitude=106.8&hourly=temp
 https://open-meteo.com/en/docs
 
 ▶️ How to Run Locally
-npm install
-npm run dev
+`npm install`
+`npm run dev`
 
 📦 Build for Production
-npm run build
-npm start
+`npm run build`
+`npm start`
