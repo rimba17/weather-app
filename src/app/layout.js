@@ -16,6 +16,9 @@ const bricolage = Bricolage_Grotesque({
 export const metadata = {
   title: "Weather App",
   description: "Weather App",
+  icons: {
+    icon: "/assets/images/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({ children }) {
