@@ -29,3 +29,24 @@
 body{
   color: #ffffff;
 }
+/* Styling Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px; 
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-neutral-600);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+.custom-scroll {
+  scrollbar-gutter:inherit;
+  /* padding-top: 10px; */
+}

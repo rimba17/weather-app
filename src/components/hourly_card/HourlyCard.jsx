@@ -24,7 +24,8 @@ const HourlyCard = () => {
     hourlyOfSelectedDay = hourlyGroup[selectedDayDate];
   }
   return (
-    <div className="relative bg-neutral-800 rounded-[15px] p-5 lg:p-4">
+    <div className="relative bg-neutral-800 rounded-[15px] p-5 lg:p-4 lg:max-h-145 flex flex-col">
+      {/* HEADER */}
       <div className="flex items-center justify-between">
         <h1 className="font-semibold text-xl mb-2 lg:mb-0 lg:text-base">
           Hourly forecast
@@ -39,7 +40,9 @@ const HourlyCard = () => {
           <DropDown />
         </button>
       </div>
-      <div className="flex flex-col gap-2">
+
+      {/* SCROLL AREA */}
+      <div className="mt-3 flex flex-col gap-2 overflow-y-auto custom-scroll">
         {!hourlyOfSelectedDay ? (
           <HourlyLoading />
         ) : (
@@ -47,7 +50,7 @@ const HourlyCard = () => {
             const Icon = weatherCode[data.code];
             return (
               <div
-                className="bg-neutral-700 p-2 rounded-lg mt-2 flex gap-2 items-center justify-between"
+                className="bg-neutral-700 p-2 rounded-lg flex gap-2 items-center justify-between"
                 key={index}
               >
                 <div className="flex items-center gap-2">
@@ -63,9 +66,8 @@ const HourlyCard = () => {
             );
           })
         )}
-
-        {/* {} */}
       </div>
+
       <HourlyDaySelect isOpen={isSelectDayOpen} />
     </div>
   );

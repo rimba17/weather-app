@@ -19,18 +19,16 @@ export const groupHourlyByDate = (hourly) => {
     if (!grouped[date]) {
       grouped[date] = [];
     }
-    // skip 3 jam
-    if (index % 3 === 0) {
-      grouped[date].push({
-        time: hour,
-        temp: temperature_2m[index],
-        feels: apparent_temperature[index],
-        humidity: relativehumidity_2m[index],
-        wind: windspeed_10m[index],
-        precip: precipitation[index],
-        code: weathercode[index],
-      });
-    }
+
+    grouped[date].push({
+      time: hour,
+      temp: temperature_2m[index],
+      feels: apparent_temperature[index],
+      humidity: relativehumidity_2m[index],
+      wind: windspeed_10m[index],
+      precip: precipitation[index],
+      code: weathercode[index],
+    });
   });
 
   return grouped;

@@ -14,10 +14,15 @@ const Search = () => {
   } = useContext(GlobalContext);
 
   const handleSearch = async () => {
+    const cleaned = search.trim().replace(/\s+/g, " ");
+
+    if (cleaned.length === 0) {
+      return;
+    }
     setIsSearchProggress(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_GEOCODING_API}?name=${search}&count=5`
+        `${process.env.NEXT_PUBLIC_GEOCODING_API}?name=${cleaned}&count=5`
       );
       if (!res.ok) {
         setIsErrorFetch("Something went wrong");
