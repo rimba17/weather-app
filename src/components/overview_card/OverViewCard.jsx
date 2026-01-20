@@ -21,10 +21,10 @@ const OverViewCard = () => {
         <LoadingOverViewCard />
       ) : (
         <div
-          className={`min-h-72 max-h-64 flex flex-col px-6 py-14 
+          className={`flex flex-col px-6 py-14 
         bg-[url('/assets/images/bg-today-small.svg')]   
         bg-no-repeat bg-center bg-cover rounded-2xl md:bg-[url('/assets/images/bg-today-large.svg')] 
-       lg:min-h-65 lg:flex-row lg:justify-between lg:items-center`}
+        lg:flex-row lg:justify-between lg:items-center`}
         >
           <div>
             <h1 className="text-2xl font-semibold mb-1 text-center lg:mb-0 lg:text-2xl lg:text-start">
@@ -43,7 +43,7 @@ const OverViewCard = () => {
                   convertValueByUnit(
                     weatherData.daily.temperature_2m_max[selectedDayIndex],
                     unitType,
-                    "temp"
+                    "temp",
                   )}
               </i>
             </h1>
