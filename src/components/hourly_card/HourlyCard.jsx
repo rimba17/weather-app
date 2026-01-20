@@ -24,7 +24,7 @@ const HourlyCard = () => {
     hourlyOfSelectedDay = hourlyGroup[selectedDayDate];
   }
   return (
-    <div className="relative bg-neutral-800 rounded-[15px] p-5 lg:p-4 lg:max-h-145 flex flex-col">
+    <div className="relative bg-neutral-800 rounded-[15px] p-5 flex flex-col h-full lg:p-4 ">
       {/* HEADER */}
       <div className="flex items-center justify-between">
         <h1 className="font-semibold text-xl mb-2 lg:mb-0 lg:text-base">
@@ -42,7 +42,7 @@ const HourlyCard = () => {
       </div>
 
       {/* SCROLL AREA */}
-      <div className="mt-3 flex flex-col gap-2 overflow-y-auto custom-scroll">
+      <div className="mt-3 flex flex-col gap-2 overflow-y-auto custom-scroll h-80 lg:h-120">
         {!hourlyOfSelectedDay ? (
           <HourlyLoading />
         ) : (

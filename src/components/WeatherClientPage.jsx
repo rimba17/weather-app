@@ -20,17 +20,17 @@ const WeatherClientWrapper = () => {
       <div className="col-span-12 mb-10">
         <Search />
       </div>
-      <div className="col-span-12 lg:col-span-8">
-        <OverViewCard />
-        <div className="mt-6">
+      <div className="col-span-12 grid grid-cols-12 gap-x-4 pb-3 lg:grid-rows-1 lg:items-stretch">
+        {/* LEFT */}
+        <div className="col-span-12 mb-4 flex flex-col gap-6 lg:mb-0 lg:col-span-8">
+          <OverViewCard />
           <WeatherInfoCard />
-        </div>
-        <div className="mt-8 mb-8 lg:mb-0">
           <DailyForecastCard />
         </div>
-      </div>
-      <div className="col-span-12 pb-10 lg:pb-0 lg:col-span-4">
-        <HourlyCard />
+        {/* RIGHT */}
+        <div className="col-span-12 lg:col-span-4">
+          <HourlyCard />
+        </div>
       </div>
     </section>
   );

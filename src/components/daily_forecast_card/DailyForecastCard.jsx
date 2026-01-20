@@ -39,7 +39,7 @@ const DailyForecastCard = () => {
                       {convertValueByUnit(
                         weatherData.daily.temperature_2m_max[index],
                         unitType,
-                        "temp"
+                        "temp",
                       )}
                     </p>
                   </div>
@@ -48,7 +48,7 @@ const DailyForecastCard = () => {
                       {convertValueByUnit(
                         weatherData.daily.temperature_2m_min[index],
                         unitType,
-                        "temp"
+                        "temp",
                       )}
                     </p>
                   </div>
